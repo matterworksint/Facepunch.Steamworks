@@ -194,6 +194,12 @@ public static class Cleanup
 
 		if ( name == "ISteamUGC.RequestUGCDetails" ) return true;
 
+		//
+		// ISteamGameSearch is deprecated and references non-existent types
+		//
+		if ( name.StartsWith( "ISteamGameSearch." ) )
+			return true;
+
 		return false;
 	}	
 	
