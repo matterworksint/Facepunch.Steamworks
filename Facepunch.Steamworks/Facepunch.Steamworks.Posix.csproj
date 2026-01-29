@@ -13,4 +13,27 @@
 
 	<Import Project="Facepunch.Steamworks.targets" />
 
+	<ItemGroup>
+		<Content Include="lib/linux32/libsteam_api.so">
+			<PackagePath>runtimes/linux-x86/native</PackagePath>
+			<Pack>true</Pack>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Link>runtimes/linux-x86/native/libsteam_api.so</Link>
+		</Content>
+
+		<Content Include="lib/linux64/libsteam_api.so">
+			<PackagePath>runtimes/linux-x64/native</PackagePath>
+			<Pack>true</Pack>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Link>runtimes/linux-x64/native/libsteam_api.so</Link>
+		</Content>
+
+		<Content Include="lib/linuxarm64/libsteam_api.so">
+			<PackagePath>runtimes/linux-arm64/native</PackagePath>
+			<Pack>true</Pack>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Link>runtimes/linux-arm64/native/libsteam_api.so</Link>
+		</Content>
+	</ItemGroup>
+
 </Project>

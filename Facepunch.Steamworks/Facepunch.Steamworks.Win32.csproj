@@ -30,11 +30,12 @@
 			<Pack>true</Pack>
 			<PackagePath>/</PackagePath>
 		</None>
-		<None Include="steam_api.dll">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		<Content Include="lib/win32/steam_api.dll">
+			<PackagePath>runtimes/win-x86/native</PackagePath>
 			<Pack>true</Pack>
-			<PackagePath>content</PackagePath>
-		</None>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Link>runtimes/win-x86/native/steam_api.dll</Link>
+		</Content>
 	</ItemGroup>
 
 	<Import Project="Facepunch.Steamworks.targets" />
