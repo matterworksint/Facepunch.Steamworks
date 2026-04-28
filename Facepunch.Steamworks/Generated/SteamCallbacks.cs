@@ -2538,6 +2538,21 @@ namespace Steamworks.Data
 	}
 	
 	[StructLayout( LayoutKind.Sequential, Pack = Platform.StructPlatformPackSize )]
+	internal struct SteamRemotePlaySessionAvatarLoaded_t : ICallbackData
+	{
+		internal uint SessionID; // m_unSessionID RemotePlaySessionID_t
+		internal int Image; // m_iImage int
+		internal int Wide; // m_iWide int
+		internal int Tall; // m_iTall int
+		
+		#region SteamCallback
+		public static int _datasize = System.Runtime.InteropServices.Marshal.SizeOf( typeof(SteamRemotePlaySessionAvatarLoaded_t) );
+		public int DataSize => _datasize;
+		public CallbackType CallbackType => CallbackType.SteamRemotePlaySessionAvatarLoaded;
+		#endregion
+	}
+	
+	[StructLayout( LayoutKind.Sequential, Pack = Platform.StructPlatformPackSize )]
 	internal struct SteamNetworkingMessagesSessionRequest_t : ICallbackData
 	{
 		internal NetIdentity DentityRemote; // m_identityRemote SteamNetworkingIdentity

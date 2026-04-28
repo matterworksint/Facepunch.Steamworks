@@ -2381,7 +2381,8 @@ namespace Steamworks
 		SiteLicense = 13,
 		KioskMode_Deprecated = 14,
 		BlockAlways = 15,
-		Max = 16,
+		Desktop = 16,
+		Max = 17,
 	}
 	
 	//
@@ -2762,6 +2763,7 @@ namespace Steamworks
 		LogLevel_P2PRendezvous = 17,
 		LogLevel_SDRRelayPings = 18,
 		ECN = 999,
+		SDRClient_EnableTOSProbes = 998,
 		DELETED_EnumerateDevVars = 35,
 	}
 	
