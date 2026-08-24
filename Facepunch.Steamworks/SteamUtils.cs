@@ -285,9 +285,23 @@ namespace Steamworks
 		}
 
 		/// <summary>
-		/// Gets whether or not Steam itself is running on the Steam Deck.
+		/// Which Steam hardware device the game is running on, if any.
+		/// Intended for analytics, support and diagnostics - use the feature
+		/// specific calls for functional decisions.
 		/// </summary>
-		public static bool IsRunningOnSteamDeck => Internal.IsSteamRunningOnSteamDeck();
+		public static SteamHardwareType RunningOnSteamHardware => Internal.IsRunningOnSteamHardware();
+
+		/// <summary>
+		/// The suggested default game configuration (video settings and other) for the
+		/// hardware this is running on. Lets Steam map future hardware onto settings
+		/// you've already tuned, without needing a recompile.
+		/// </summary>
+		public static SteamHardwareDefaultConfig SteamHardwareDefaultConfig => Internal.GetSteamHardwareDefaultConfig();
+
+		/// <summary>
+		/// Gets whether or not the game is running under the Proton compatibility layer on Linux.
+		/// </summary>
+		public static bool IsRunningUnderProton => Internal.IsRunningUnderProton();
 
 
 		/// <summary>

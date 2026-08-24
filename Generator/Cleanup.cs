@@ -156,6 +156,9 @@ public static class Cleanup
 		if ( name == "TimelineGameMode" ) return "public";
 		if ( name == "TimelineEventClipPriority" ) return "public";
 		if ( name == "TimelineEventHandle" ) return "public";
+		if ( name == "SteamHardwareType" ) return "public";
+		if ( name == "SteamHardwareDefaultConfig" ) return "public";
+		if ( name == "GamePerformanceSetting" ) return "public";
 
 		return "internal";
 	}
